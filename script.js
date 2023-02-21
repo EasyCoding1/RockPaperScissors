@@ -1,6 +1,6 @@
-const co1 = "Rock!";
-const co2 = "Paper!";
-const co3 = "Scissors!";
+const co1 = "Rock";
+const co2 = "Paper";
+const co3 = "Scissors";
 
 
 
@@ -21,11 +21,19 @@ console.log("Computer choice: " + computerChoice);
 
  
 
+
+
+
 function getPlayerChoice () {
-    const pi1 = "Rock";
-    const pi2 = "Paper";
-    const pi3 = "Scissors";    
-    return prompt("Select your choice. Enter: Rock , Paper, or Scissors");
+    let answer = prompt("Select your choice. Enter: 'Rock' , 'Paper', or 'Scissors' ");
+    while (answer != "Rock" &&  answer !== "Paper" && answer !== "Scissors") {
+      answer = prompt("Sorry, please enter exactly 'Rock' , 'Paper', or 'Scissors'");
+        } 
+    return answer;
+    } 
+    
+    
+const playerChoice = getPlayerChoice();
+console.log("Player Choice: " + playerChoice);
 
 
-}
