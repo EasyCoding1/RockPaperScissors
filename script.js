@@ -96,17 +96,28 @@ const playAgainYes = "Yes";
 const playAgainNo = "No";
 
 function endofgame(playerScore, computerScore) {
+    let playAgain;
     if (playerScore == 5) {
-       let playAgain = prompt("You are Victorious. Write 'Yes' to play Again");
-       return playAgain.toLowerCase() === playAgainYes.toLowerCase();
-    } else if (computerScore == 5){
-        let playAgain = prompt("You have been defeated, but there is still hope. Write 'Yes' to Try Again.");
-        return playAgain.toLowerCase()  === playAgainYes.toLowerCase();
-    } else {
-        let playAgain = prompt("I didn't get that, please write exactly 'Yes' or 'No' ");
-        return playAgain.toLowerCase()  === playAgainYes.toLowerCase();
+      playAgain = prompt("You are Victorious. Write 'Yes' to play Again or 'No' to Stop playing");
+    } else if (computerScore == 5) {
+      playAgain = prompt("You have been defeated, but there is still hope. Write 'Yes' to Try Again or 'No' to Stop playing.");
     }
-}
+  
+    if (playAgain && playAgain.toLowerCase() === playAgainYes.toLowerCase()) {
+      return true;
+    } else if (playAgain && playAgain.toLowerCase() === playAgainNo.toLowerCase()) {
+      return false;
+    } else {
+      do {
+        playAgain = prompt("I didn't get that, please write exactly 'Yes' or 'No'");
+      } while (playAgain.toLowerCase() != playAgainYes.toLowerCase() && playAgain.toLowerCase() != playAgainNo.toLowerCase());
+      if (playAgain.toLowerCase() === playAgainYes.toLowerCase()) {
+        return true;
+      } else if (playAgain.toLowerCase() === playAgainNo.toLowerCase()) {
+        return false;
+      }
+    }
+  }
 
 let playAgain = true;
 while (playAgain) {
@@ -115,4 +126,4 @@ while (playAgain) {
 
 
 /* ADVICE FROM GUY ON DISCORD.
-So if you examine your endofgame function, there's an outcome for if the player won or the computer won. Notice in your newRound function you already have it so that the game stops when either the player or computer has five points. This leaves the third part of your if structure, the one with "I didn't get that...", unreachable, because you'll never end a game in which neither the player nor the computer has five points. 
+So if you examine your endofgame function, there's an outcome for if the player won or the computer won. Notice in your newRound function you already have it so that the game stops when either the player or computer has five points. This leaves the third part of your if structure, the one with "I didn't get that...", unreachable, because you'll never end a game in which neither the player nor the computer has five points.*/ 
