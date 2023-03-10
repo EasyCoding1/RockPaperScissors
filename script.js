@@ -127,3 +127,14 @@ while (playAgain) {
 
 /* ADVICE FROM GUY ON DISCORD.
 So if you examine your endofgame function, there's an outcome for if the player won or the computer won. Notice in your newRound function you already have it so that the game stops when either the player or computer has five points. This leaves the third part of your if structure, the one with "I didn't get that...", unreachable, because you'll never end a game in which neither the player nor the computer has five points.*/ 
+
+
+console.log('hello');
+
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log('Hello world');
+  });
+});
