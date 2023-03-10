@@ -1,4 +1,4 @@
-const co1 = "Rock";
+/*const co1 = "Rock";
 const co2 = "Paper";
 const co3 = "Scissors";
 

@@ -1,0 +1,97 @@
+.body {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+
+
+.header {
+    height: 150px;
+    width: 100vw;
+    background-color: rgb(155, 114, 53);
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+    .hleft {
+        padding-left: 25px;
+    }
+
+
+    .htitle {
+        color: bisque;
+        font-size: 40px;
+    }
+
+    .hright {
+        padding-right: 25px;
+    }
+
+
+
+.main {
+    height: 70vh;
+    width: 100vw;
+    background-color: aquamarine;
+    display: flex;
+    flex-grow: 1;
+}
+
+
+    .mainL {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .mainC {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
+        justify-content: center;
+    }
+
+        #gameScrn {
+            
+            border: 5px solid black;
+            flex: 1;
+            margin-bottom: 100px;
+            margin-top: 25px;
+        }
+
+        #gameLog {
+            border: 5px solid black;
+            height: 50px;
+            margin-bottom: 50px;
+        }
+
+
+
+
+    .mainR {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+
+
+
+
+.footer {
+    height: 120px;
+    width: 100vw;
+    background-color: rgb(171, 52, 28);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: bisque;
+}
